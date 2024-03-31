@@ -17,5 +17,7 @@ media/
 # Ignore local development settings
 local_settings.py
 
+**/migrations/
+
 # Ignore virtual environment directory
 venv/
