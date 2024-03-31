@@ -28,12 +28,14 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
+SESSION_EXPIRE_AT_BROWSER_CLOSE=True
+
 STATIC_URL = '/static/'
 #STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 #STATIC_URL = '/static/'
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR, "static"),
-# ]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
 
 
 # Application definition
@@ -46,6 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'healthapp',
+    'webapp',
     'rest_framework'
 ]
 
