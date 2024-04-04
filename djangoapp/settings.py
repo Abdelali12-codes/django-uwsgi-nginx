@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'healthapp',
     'webapp',
     'formapp',
+    'library',
     'rest_framework'
 ]
 
@@ -65,6 +66,9 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'djangoapp.urls'
 
+MEDIA_URL = "/media/"
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -89,8 +93,11 @@ WSGI_APPLICATION = 'djangoapp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR,'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'HOST': 'localhost',
+        'NAME': 'testdb',
+        'USER': 'myuser',
+        'PASSWORD': 'mypassword'
     }
 }
 

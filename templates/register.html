@@ -6,7 +6,10 @@
 <link rel="stylesheet" href="{% static 'css/item.css' %}">
 </head>
 <body>
-    {{ form.as_table }}
-    <input type="submit" value="OK">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Submit">
+    </form>
 </body>
 </html>

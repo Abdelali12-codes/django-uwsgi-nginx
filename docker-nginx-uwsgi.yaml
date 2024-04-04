@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+  uwsgi:
+    container_name: uwsgi
+    build:
+       context: .
+       dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+    volumes:
+      - shared_volume:/tmp
+      
+  nginx:
+    container_name: nginx
+    build:
+      context: ./nginx 
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+    depends_on:
+      - uwsgi
+    volumes:
+      - shared_volume:/tmp
+  
+volumes:
+  shared_volume:

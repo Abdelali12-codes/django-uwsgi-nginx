@@ -12,7 +12,7 @@ __pycache__/
 staticfiles/
 
 # Ignore media directory (user-uploaded files)
-media/
+#media/
 
 # Ignore local development settings
 local_settings.py
