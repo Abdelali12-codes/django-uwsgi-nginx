@@ -34,3 +34,7 @@ In Django, the Meta class is used to provide metadata or configuration options f
 12. proxy: Boolean flag indicating if the model is a proxy model.
 
 13. indexes: A list of Index objects to be created on the model's database table.
+
+## aws elasticbeanstalk
+### steps:
+1. 
