@@ -51,8 +51,16 @@ INSTALLED_APPS = [
     'webapp',
     'formapp',
     'library',
-    'rest_framework'
+    'rest_framework',
+    'graphene_django',
+    'core',
+    'blog',
 ]
+# The GRAPHENE setting configures Graphene-Django to look in a particular place for your GraphQL schema
+GRAPHENE = {
+  "SCHEMA": "blog.schema.schema",
+}
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

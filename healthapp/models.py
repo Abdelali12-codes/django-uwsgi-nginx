@@ -7,3 +7,4 @@ class Data(models.Model):
 
     class Meta:
         db_table = "healthapp"
+

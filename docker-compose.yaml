@@ -5,11 +5,11 @@ services:
     image: postgres:latest
     environment:
       # PostgreSQL database
-      POSTGRES_DB: testdb
+      POSTGRES_DB: django
       # PostgreSQL username
-      POSTGRES_USER: myuser
+      POSTGRES_USER: django
       # SPostgreSQL password
-      POSTGRES_PASSWORD: mypassword
+      POSTGRES_PASSWORD: djangoapp
     ports:
       - "5432:5432"
     volumes:
@@ -24,9 +24,9 @@ services:
     image: dpage/pgadmin4:latest
     environment:
       # Default email for pgAdmin 4
-      PGADMIN_DEFAULT_EMAIL: admin@email.com
+      PGADMIN_DEFAULT_EMAIL: abdelali@gmail.com
       # Password for pgAdmin 4
-      PGADMIN_DEFAULT_PASSWORD: adminpassword
+      PGADMIN_DEFAULT_PASSWORD: djangoapp
     ports:
       # Map host port 5050 to container port 80
       - "5050:80"
